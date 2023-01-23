@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: validate
+  namespace: webhook
+spec:
+  selector:
+    app: validate
+  ports:
+  - port: 443
+    targetPort: 5000
+    name: https
